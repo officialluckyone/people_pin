@@ -37,10 +37,10 @@ export default function HomeScreen() {
     try {
       const response = await axios.get('https://jsonplaceholder.typicode.com/users')
       setUsers(response.data)
-      showSnackbar('Berhasil memuat data pengguna')
+      showSnackbar('Successfully loaded user data')
     } catch (error) {
       console.error(error)
-      showSnackbar('Gagal memuat data pengguna')
+      showSnackbar('Failed to load user data')
     } finally {
       setLoading(false)
       setRefreshing(false)

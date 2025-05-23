@@ -19,7 +19,7 @@ export default function MapScreen() {
 
   useEffect(() => {
     if (!coords) {
-      showSnackbar('Koordinat tidak tersedia')
+      showSnackbar('Coordinates not available')
       return
     }
 
@@ -30,16 +30,16 @@ export default function MapScreen() {
         typeof result.latitude !== 'number' ||
         typeof result.longitude !== 'number'
       ) {
-        showSnackbar('Koordinat harus berupa angka')
+        showSnackbar('Coordinates must be numeric')
         return
       }
 
       setParsedCoords(result)
     } catch {
-      showSnackbar('Format koordinat tidak valid')
+      showSnackbar('Invalid coordinate format')
     }
 
-    showSnackbar('Peta berhasil dimuat!');
+    showSnackbar('Map loaded successfully!');
   }, [coords])
 
   if (!parsedCoords) {

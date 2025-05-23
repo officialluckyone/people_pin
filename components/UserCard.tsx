@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
     color: Colors.light.text,
     fontFamily:'DMSans-Regular',
     flexShrink:1,
-    flexWrap:'wrap'
+    flexWrap:'wrap',
+    paddingEnd:50
   },
   coords: {
     fontSize: 12,
