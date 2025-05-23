@@ -116,13 +116,16 @@ const styles = StyleSheet.create({
   address: {
     fontSize: 14,
     color: Colors.light.text,
-    fontFamily:'DMSans-Regular'
+    fontFamily:'DMSans-Regular',
+    flexShrink:1,
+    flexWrap:'wrap'
   },
   coords: {
     fontSize: 12,
     color: Colors.light.text,
     marginBottom: 12,
-    fontFamily:'DMSans-Regular'
+    fontFamily:'DMSans-Regular',
+    flexWrap:'wrap'
   },
   mapButton: {
     flexDirection: 'row',

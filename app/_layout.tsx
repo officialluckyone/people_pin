@@ -5,7 +5,7 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -60,13 +60,15 @@ export default function RootLayout() {
                   ),
                   headerStyle: { backgroundColor: Colors.light.background },
                   headerTitleAlign: 'left',
+                  headerBackVisible:false
                 }}
               />
               <Stack.Screen name="map/map" options={{ 
                   title: 'Location',
-                    headerStyle: { backgroundColor: '#fff' }, // warna background header
-                    headerTintColor: Colors.light.primary,                     // warna icon back dan tombol header
-                    headerTitleStyle: { color: Colors.light.primary },    
+                  headerStyle: { backgroundColor: '#fff' }, // warna background header
+                  headerTintColor: Colors.light.primary,                     // warna icon back dan tombol header
+                  headerTitleStyle: { color: Colors.light.primary },
+                  headerBackTitle: Platform.OS === 'ios' ? 'Back' : '',
                 }} 
               />
             </Stack>
