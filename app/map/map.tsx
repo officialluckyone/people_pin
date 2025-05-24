@@ -40,7 +40,7 @@ export default function MapScreen() {
     }
 
     showSnackbar('Map loaded successfully!');
-  }, [coords])
+  }, [coords, showSnackbar])
 
   if (!parsedCoords) {
     return (
